@@ -1,0 +1,5 @@
+[deps]
+GrayCoding = "189a535d-5fc2-4299-8577-09928eef1b75"
+LibSndFile = "b13ce0c6-77b0-50c6-a2db-140568b8d1a5"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+WAV = "8149f6b0-98f6-5db9-b78f-408fbbb8ef88"
