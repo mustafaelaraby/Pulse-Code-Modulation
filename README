@@ -1,0 +1,54 @@
+# Signal Processing Toolbox
+
+The Signal Processing Toolbox is a collection of Julia functions for signal processing tasks such as encoding, decoding, quantization, rectification, and more.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Functions](#functions)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/signal-processing-toolbox.git
+```
+2. Navigate to the project directory:
+
+```bash
+cd signal-processing-toolbox
+```
+3. Install the required packages:
+
+```bash
+julia --project=.
+using Pkg
+Pkg.activate(".")
+Pkg.instantiate()
+```
+
+
+
+
+4. Usage
+
+To use the Signal Processing Toolbox in your Julia project, you can simply include the required functions:
+
+include("encoder.jl")
+include("decoder.jl")
+include("quantizer.jl")
+
+# Include other necessary files
+
+
+5. Contributing
+
+Contributions to the Signal Processing Toolbox are welcome! If you have ideas for new features, improvements, or bug fixes, please feel free to open an issue or submit a pull request.
+
+6. License
+This project is licensed under the MIT License.
+
