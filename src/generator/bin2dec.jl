@@ -1,5 +1,7 @@
 #=
-    *                           [[bin2dec(arr)]]
+    ! Copyright (c) 2024 Mustafa Elaraby, Cairo,
+    ! Egypt. All rights reserved.
+    ! Email: mustafaelaraby78@gmail.com
 
     * Converts an array of binary strings to decimal numbers.
 

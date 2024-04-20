@@ -1,5 +1,7 @@
 #=
-    *           [[rectify_ami(arr, A)]]
+    ! Copyright (c) 2024 Mustafa Elaraby, Cairo,
+    ! Egypt. All rights reserved.
+    ! Email: mustafaelaraby78@gmail.com
 
     * Adjusts positive elements in the array to match the threshold value and negative elements to the negative of the threshold value.
 

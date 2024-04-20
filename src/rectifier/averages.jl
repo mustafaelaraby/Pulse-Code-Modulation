@@ -1,4 +1,10 @@
 #=
+
+    ! Copyright (c) 2024 Mustafa Elaraby, Cairo,
+    ! Egypt. All rights reserved.
+    ! Email: mustafaelaraby78@gmail.com
+
+
     * Compute the moving averages of a given array.
 
     * Parameters:

@@ -1,16 +1,18 @@
-#=  
-    * Copyright (c) 2024 Mustafa Elaraby, Cairo,
-    * Egypt. All rights reserved.
-    * Email: mustafaelaraby78@gmail.com
+#= 
+    ! Copyright (c) 2024 Mustafa Elaraby, Cairo,
+    ! Egypt. All rights reserved.
+    ! Email: mustafaelaraby78@gmail.com
+
+
     * Sample a continuous signal at a specified sampling frequency.
 
     * Arguments
-        * `signal`: Array{<:Real,1}
+        * `signal`: Matrix{<:Real,1}
                 ?? The input signal to be sampled.
         * `sampling_frequency`: Real
                 ?? The desired sampling frequency in Hz.
-        * `time`: Real (optional)
-                ?? The total duration of the signal. If provided, the sampling frequency is calculated as the ratio of the signal length to the time duration.
+        * `rate`: Real (optional)
+                ?? The total rate of the signal.
 
     * Returns
         * `sampled_signal`: Array{<:Real,1}
@@ -28,22 +30,25 @@
 =#
 
 
-function sampler(signal, sampling_frequency,time=Nothing)
+function sampler(signal::Matrix{T1}, sampling_frequency::T2, rate::T3=nothing) where {T1<:Real,T2<:Real,T3<:Real}
 
-    if time == nothing
-        original_fs = length(signal)
-    else
-        original_fs = length(signal)/time
+    if rate === nothing
+        rate = length(signal)
     end
     # Calculate the time step between samples
-    original_fs = length(signal)/time
-    step = ceil(Int, original_fs / sampling_frequency)
+    step = rate / sampling_frequency
 
     # Generate the time vector
     time_vector = 0:step:(length(signal)-1)
 
     # Perform the sampling
-    sampled_signal = signal[1:step:end]
-
+    sampled_signal = Float64[]
+    for i in 1:step:length(signal)
+        lower = signal[floor(Int, i)]
+        upper = signal[ceil(Int, i)]
+        avg = (upper + lower) / 2
+        push!(sampled_signal, avg)
+    end
+    #     return sampled_signal, time_vector
     return sampled_signal, time_vector
 end

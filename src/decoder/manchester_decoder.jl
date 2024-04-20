@@ -1,5 +1,7 @@
 #=
-    *                   [[manchester_decoder(signal)]]
+    ! Copyright (c) 2024 Mustafa Elaraby, Cairo,
+    ! Egypt. All rights reserved.
+    ! Email: mustafaelaraby78@gmail.com
 
     * Decodes a Manchester encoded signal to obtain the original binary data.
 
@@ -14,7 +16,7 @@
 =#
 
 
-function manchester_decoder(signal::Vector{T1}, A::T2=1,) where {T1<:Real,T2<:Real}
+function manchester_decoder(signal::Vector{T1}, A::T2=1) where {T1<:Real,T2<:Real}
     if length(signal) % 2 != 0
         throw(ArgumentError("Length of signal must be even"))
     end

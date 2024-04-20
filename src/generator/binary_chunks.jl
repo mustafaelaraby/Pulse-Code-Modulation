@@ -1,5 +1,7 @@
 #=
-    *                   [[split_into_chunks(bits, chunk_size)]]
+    ! Copyright (c) 2024 Mustafa Elaraby, Cairo,
+    ! Egypt. All rights reserved.
+    ! Email: mustafaelaraby78@gmail.com
 
     * Splits a string of bits into chunks of the specified size.
 

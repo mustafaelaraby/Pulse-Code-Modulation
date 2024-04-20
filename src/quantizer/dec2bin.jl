@@ -1,5 +1,7 @@
 #=
-    *                           [[dec2bin(arr, numBits)]]
+    ! Copyright (c) 2024 Mustafa Elaraby, Cairo,
+    ! Egypt. All rights reserved.
+    ! Email: mustafaelaraby78@gmail.com
 
     * Converts an array of decimal numbers to binary representation with a specified number of bits.
 
