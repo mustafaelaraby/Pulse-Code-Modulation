@@ -1,4 +1,4 @@
-# Signal Processing Toolbox
+Signal Processing Toolbox
 
 The Signal Processing Toolbox is a collection of Julia functions for signal processing tasks such as encoding, decoding, quantization, rectification, and more.
 
