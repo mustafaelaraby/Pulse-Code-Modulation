@@ -2,7 +2,7 @@ include("midrise.jl")
 include("midtread.jl")
 
 
-function quantizer(input_signal,L,mp,type)
+function quantizer(input_signal::Vector{T}, L::Int64, mp::T, type::String) where {T<:Real}
     if type == "mid-rise"
         quantized_signal, bits,levels,err = midrise(input_signal,L,mp)
     elseif type == "mid-tread"

@@ -1,13 +1,13 @@
-# Original array of strings
-original_array = ["apple", "banana", "orange", "grape"]
+using WAV
 
-# Empty array to store assigned elements
-assigned_array = Vector{String}(undef, length(original_array))
+# Assume your audio data is stored in a Vector{Float64} called `data`
+data = randn(66150)  # Example data (random noise)
 
-# Assigning elements one by one using a loop
-for i in eachindex(original_array)
-    assigned_array[i] = original_array[3]
-end
+# Specify the filename where you want to save the WAV file
+# filename = "output.wav"
 
-# Print the assigned array
-println(assigned_array)
+# # Specify the sampling frequency (Fs) in Hz
+# Fs = 44100  # Example: 44.1 kHz
+
+# # Call the wavwrite function with audio data, filename, and optional parameters
+# wavwrite(data, filename; Fs=Fs)

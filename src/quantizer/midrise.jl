@@ -1,14 +1,15 @@
 include("nearest_value.jl")
+include("dec2bin.jl")
 
 using Statistics
 
-function midrise(signal, L, mp)
+function midrise(signal::Vector{T}, L::Int64, mp::T) where {T<:Real}
     step = (2 * mp) / L
     Levels = collect(-L/2:1:(L/2-1))
     Levels = Levels .* step .+ 0.5 * step
 
     numBits = ceil(Int, log2(L))  # Convert the result to an integer
-    binaryArray = [string(i, base=2, pad=numBits) for i in 0:L-1]
+    binaryArray = dec2bin(collect(0:L-1), numBits)
 
     quantized_signal, error, index_arr = nearest_value(Levels, signal)
 
@@ -20,8 +21,5 @@ function midrise(signal, L, mp)
     end
 
     bits_string = join(bits_string)
-    bits_signal = [parse(Int64, digit) for digit in bits_string]
-
-
-    return quantized_signal,bits_signal,Levels,err
+    return quantized_signal, bits_string, Levels, err
 end

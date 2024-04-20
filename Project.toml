@@ -1,5 +1,8 @@
 [deps]
 GrayCoding = "189a535d-5fc2-4299-8577-09928eef1b75"
+LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
 LibSndFile = "b13ce0c6-77b0-50c6-a2db-140568b8d1a5"
+PGFPlotsX = "8314cec4-20b6-5062-9cdb-752b83310925"
+Plotly = "58dd65bb-95f3-509e-9936-c39a10fdeae7"
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
 WAV = "8149f6b0-98f6-5db9-b78f-408fbbb8ef88"
